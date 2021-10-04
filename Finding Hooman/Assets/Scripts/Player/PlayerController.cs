@@ -1,4 +1,5 @@
 using System;
+using DialogueSystem;
 using UnityEngine;
 
 namespace Player
@@ -6,7 +7,8 @@ namespace Player
     [RequireComponent(typeof(Rigidbody))]
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private Rigidbody rb;
+        [SerializeField] private Rigidbody rigidBody;
+        [SerializeField] private DialogueManager dialogueManager;
         
         [Header("Movement")]
         [SerializeField] private float walkSpeed;
@@ -22,13 +24,17 @@ namespace Player
 
         private void Start()
         {
-            if (!rb) rb = GetComponent<Rigidbody>();
+            if (!rigidBody) rigidBody = GetComponent<Rigidbody>();
 
             currentSpeed = walkSpeed;
         }
 
         private void FixedUpdate()
         {
+            // Player cannot move if dialogue is playing
+            if (dialogueManager.PlayingDialogue)
+                return;
+            
             // Running transitions
             if ((Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0) && grounded)
             {
@@ -43,12 +49,12 @@ namespace Player
                 Jump();
             
             // Movement input
-            var trans = rb.transform;
+            var trans = rigidBody.transform;
             
             transform.Rotate(0, Input.GetAxis("Horizontal") * currentSpeed, 0);
             directionToMove.z = Input.GetAxis("Vertical");
             directionVector = (trans.right * directionToMove.x) + (trans.forward * directionToMove.z);
-            rb.MovePosition(trans.position + Time.deltaTime * currentSpeed * directionVector);
+            rigidBody.MovePosition(trans.position + Time.deltaTime * currentSpeed * directionVector);
         }
 
         private void SlowDown()
@@ -65,7 +71,7 @@ namespace Player
 
         private void Jump()
         {
-            rb.AddForce(new Vector3(0, jumpHeight, 0) * jumpSpeed, ForceMode.Impulse);
+            rigidBody.AddForce(new Vector3(0, jumpHeight, 0) * jumpSpeed, ForceMode.Impulse);
             grounded = false;
         }
 
