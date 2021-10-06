@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12a9864c474abf345b31b9f0df05e5ab, type: 3}
+  m_Name: Trash
+  m_EditorClassIdentifier: 
+  dialogueImages: []
+  lines:
+  - This doesn't smell like my owner
+  - Maybe sniffing this was a bad idea

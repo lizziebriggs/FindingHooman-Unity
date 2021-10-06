@@ -9,8 +9,6 @@ namespace DialogueSystem
 
         private void OnTriggerStay(Collider other)
         {
-            Debug.Log("Player entered");
-            
             if(Input.GetKey(KeyCode.E) && !dialogueManager.PlayingDialogue)
                 dialogueManager.StartDialogue(dialogue);
         }
