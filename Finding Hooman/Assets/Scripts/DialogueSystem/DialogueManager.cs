@@ -1,7 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace DialogueSystem
 {
@@ -10,20 +10,18 @@ namespace DialogueSystem
         [SerializeField] private DialogueUI dialogueUI;
         [SerializeField] [Range(0f, 0.2f)] private float dialogueSpeed;
 
-        private Queue<string> lines;
-        private Queue<Sprite> images;
+        // Be able to hide UI when dialogue is playing
+        [Header("UI")]
+        [SerializeField] private GameObject moodImage;
+
+        private Queue<string> lines = new Queue<string>();
+        private Queue<Sprite> images = new Queue<Sprite>();
         
         private bool playingDialogue;
         public bool PlayingDialogue => playingDialogue;
 
         private void Start()
         {
-            playingDialogue = false;
-            
-            lines = new Queue<string>();
-            images = new Queue<Sprite>();
-            
-            dialogueUI.gameObject.SetActive(false);
             dialogueUI.endOfLine.gameObject.SetActive(false);
         }
 
@@ -31,14 +29,14 @@ namespace DialogueSystem
         {
             if (playingDialogue)
             {
-                if (Input.GetKeyDown(KeyCode.Return))
+                if (Input.GetMouseButtonDown(0))
                     DisplayNextLine();
             }
         }
 
         public void StartDialogue(Dialogue dialogue)
         {
-            Debug.Log("Playing dialogue");
+            HideUI();
             
             playingDialogue = true;
             dialogueUI.gameObject.SetActive(true);
@@ -63,6 +61,8 @@ namespace DialogueSystem
         {
             playingDialogue = false;
             dialogueUI.gameObject.SetActive(false);
+            
+            ShowUI();
         }
 
         private void DisplayNextLine()
@@ -109,6 +109,16 @@ namespace DialogueSystem
             Color tempColour = dialogueUI.dialogueImage.color;
             tempColour.a = alpha;
             dialogueUI.dialogueImage.color = tempColour;
+        }
+
+        private void HideUI()
+        {
+            moodImage.SetActive(false);
+        }
+
+        private void ShowUI()
+        {
+            moodImage.SetActive(true);
         }
     }
 }
