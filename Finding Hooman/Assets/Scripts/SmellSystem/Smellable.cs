@@ -1,3 +1,4 @@
+using Player;
 using UnityEngine;
 
 namespace SmellSystem
@@ -7,6 +8,15 @@ namespace SmellSystem
         [Header("Smell Values")]
         [SerializeField] private Color colour;
         [SerializeField] private Transform direction;
+        
+        [Header("Mood")]
+        [SerializeField] private PlayerMoodController.Mood mood;
+        [SerializeField] protected PlayerMoodController moodController;
+
+        protected void SetMood()
+        {
+            moodController.PlayerMood = mood;
+        }
 
         private void OnTriggerStay(Collider other)
         {
@@ -16,6 +26,7 @@ namespace SmellSystem
                 // with chosen colour
                 
                 Debug.Log("Sniff sniff");
+                SetMood();
             }
         }
     }

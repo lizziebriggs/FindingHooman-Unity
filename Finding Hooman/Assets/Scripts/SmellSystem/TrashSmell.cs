@@ -1,3 +1,4 @@
+using Player;
 using UnityEngine;
 
 namespace SmellSystem
@@ -27,6 +28,7 @@ namespace SmellSystem
                 distractionActive = false;
                 timer = 0f;
                 testTrashOverlay.SetActive(false);
+                moodController.PlayerMood = PlayerMoodController.Mood.Sad;
                 return;
             }
             
@@ -38,6 +40,8 @@ namespace SmellSystem
             if (Input.GetKey(KeyCode.E))
             {
                 Debug.Log("This is trash");
+
+                SetMood();
 
                 distractionActive = true;
                 testTrashOverlay.SetActive(true);

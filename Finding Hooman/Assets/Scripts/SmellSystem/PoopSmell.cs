@@ -1,8 +1,6 @@
-using UnityEngine;
-
 namespace SmellSystem
 {
-    public class PoopSmell : MonoBehaviour
+    public class PoopSmell : Smellable
     {
         // Set mood to curious
     }
