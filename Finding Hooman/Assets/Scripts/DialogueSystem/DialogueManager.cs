@@ -13,6 +13,7 @@ namespace DialogueSystem
         // Be able to hide UI when dialogue is playing
         [Header("UI")]
         [SerializeField] private GameObject moodImage;
+        [SerializeField] private GameObject minimap;
 
         private Queue<string> lines = new Queue<string>();
         private Queue<Sprite> images = new Queue<Sprite>();
@@ -114,11 +115,13 @@ namespace DialogueSystem
         private void HideUI()
         {
             moodImage.SetActive(false);
+            minimap.SetActive(false);
         }
 
         private void ShowUI()
         {
             moodImage.SetActive(true);
+            minimap.SetActive(true);
         }
     }
 }
