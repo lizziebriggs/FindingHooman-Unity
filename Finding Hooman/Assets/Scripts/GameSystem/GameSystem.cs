@@ -10,9 +10,6 @@ namespace GameSystem
         {
             Instance = GetComponent<GameSystem>();
             DontDestroyOnLoad(this);
-
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
         }
 
         private void Awake()

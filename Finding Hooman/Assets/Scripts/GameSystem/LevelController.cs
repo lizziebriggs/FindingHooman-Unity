@@ -10,6 +10,9 @@ namespace GameSystem
         private void Start()
         {
             dialogueTrigger.TriggerDialogue();
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
 
         private void EndLevel()
