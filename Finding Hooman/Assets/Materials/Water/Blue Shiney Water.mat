@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Blue Shiney Water
+  m_Shader: {fileID: -6465566751694194690, guid: f9e72ed49d0653e49916fc9802ad7b8e, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_125589727c6a4b119e28bcb69ccf9c9b: 2.04
+    - Vector1_1b0cde0ffdf94a7d8b71a920e2664fae: 0.77
+    - Vector1_948fbdee620547e18aacf3496dd7967c: 10
+    - Vector1_98b6709ed8bd48a1801f89988329ef70: 1.12
+    - Vector1_a6c04bb78f154761b44c269a1b964eb0: 5
+    - Vector1_a72bdc1e0e294db1868a0099e3f3025d: 9.76
+    - Vector1_c5cbd8ff3fba4fbfb771a6f24353d063: 1
+    m_Colors:
+    - Color_442617f073564ef0a242516f45b1503a: {r: 0.3444287, g: 0.4046582, b: 1.6226416, a: 0}
+    - Color_955e60f5ae4644389843f81b260b02cb: {r: 0, g: 5.019608, b: 3.764706, a: 0}
+    - Vector2_07c1b7805d2d4c0b9f727bb2d0822ebd: {r: 0.1, g: 0.01, b: 0, a: 0}
+  m_BuildTextureStacks: []

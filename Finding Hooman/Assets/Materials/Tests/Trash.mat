@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Trash
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: -6465566751694194690, guid: 2367f9d7c56c5374285b5f3b988b6cc6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,6 +19,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_760329E3:
+        m_Texture: {fileID: 2800000, guid: d453f96bf0c8aa94389abe2d892c6161, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_FD26A00E:
+        m_Texture: {fileID: 2800000, guid: 9437de0c1b6a86741ab13c8b26e3fff6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -55,7 +63,33 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_1ec191b85df54e7e8c172bba42834254: 0
+    - Vector1_3b66d42db831468f911cddd91ffbd87b: 1
+    - Vector1_3e47119a91a64c95812d66c9fd83e122: 10
+    - Vector1_864243aa6efd4ad89083838c6e3198d1: 1
+    - Vector1_99270a09bf2743a2bdf00b6fc89b653c: 8
+    - Vector1_9e017522a2ce4a289543a0849fb8d52f: 4
+    - Vector1_BC374FB4: 1
+    - Vector1_a4f74be1f13b4cff8071f7a6b3b26b03: 0.003
+    - Vector1_a65662b9143046f4bfbde05deb066fcc: 1
+    - Vector1_a846f55502264be7b2acb4b30427a0d7: 0.35
+    - Vector1_b5f450000bb54960a469b7401b1c7294: 0.01
+    - Vector1_bc5154082deb4a0192726ea6c11d77cb: 30
+    - Vector1_e7960fd7228e49cab062960c5dc49b83: 0.3
+    - Vector1_ed79107682b44cfb968d5d9616a35237: 100
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -73,6 +107,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - Color_09850ad802b2418bbedd5d1a935e9380: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0, g: 0.7075472, b: 0.16029505, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
