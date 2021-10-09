@@ -7,13 +7,13 @@ namespace DialogueSystem
 {
     public class DialogueManager : MonoBehaviour
     {
+        [Header("Settings")]
         [SerializeField] private DialogueUI dialogueUI;
         [SerializeField] [Range(0f, 0.2f)] private float dialogueSpeed;
 
         // Be able to hide UI when dialogue is playing
         [Header("UI")]
-        [SerializeField] private GameObject moodImage;
-        [SerializeField] private GameObject minimap;
+        [SerializeField] private GameObject hud;
 
         private Queue<string> lines = new Queue<string>();
         private Queue<Sprite> images = new Queue<Sprite>();
@@ -114,14 +114,12 @@ namespace DialogueSystem
 
         private void HideUI()
         {
-            moodImage.SetActive(false);
-            minimap.SetActive(false);
+            hud.SetActive(false);
         }
 
         private void ShowUI()
         {
-            moodImage.SetActive(true);
-            minimap.SetActive(true);
+            hud.SetActive(true);
         }
     }
 }

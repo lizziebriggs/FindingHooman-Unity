@@ -29,5 +29,10 @@ namespace GameSystem
                 yield return null;
             }
         }
+
+        public void QuitApplication()
+        {
+            Application.Quit();
+        }
     }
 }

@@ -14,12 +14,17 @@ namespace Player
 
         private void Start()
         {
+            Time.timeScale = 1;
+            
             // Calculate offset from position in scene at play
             positionOffset = transform.position - playerToFollow.position;
         }
 
         private void LateUpdate()
         {
+            // Camera doesn't move whilst pause menu is up
+            if (Time.timeScale == 0) return;
+            
             if (rotateAroundPlayer)
             {
                 Quaternion turnAngle = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotateSpeed, Vector3.up);
