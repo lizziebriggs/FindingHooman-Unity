@@ -3205,7 +3205,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTrigger: {fileID: 1936652715}
+  dialogueManager: {fileID: 84776418}
   hud: {fileID: 1748064782}
+  dialogueBox: {fileID: 505558688}
   pauseMenu: {fileID: 2114950703}
 --- !u!4 &1936652717
 Transform:

@@ -7,9 +7,11 @@ namespace GameSystem
     public class LevelController : MonoBehaviour
     {
         [SerializeField] private DialogueTrigger dialogueTrigger;
+        [SerializeField] private DialogueManager dialogueManager;
         
         [Header("UI")]
         [SerializeField] private GameObject hud;
+        [SerializeField] private GameObject dialogueBox;
         [SerializeField] private GameObject pauseMenu;
 
         private void Start()
@@ -29,7 +31,11 @@ namespace GameSystem
             {
                 Time.timeScale = 0;
                 
-                hud.SetActive(false);
+                if(!dialogueManager.PlayingDialogue)
+                    hud.SetActive(false);
+                else
+                    dialogueBox.SetActive(false);
+                
                 pauseMenu.SetActive(true);
 
                 Cursor.lockState = CursorLockMode.None;
@@ -42,7 +48,11 @@ namespace GameSystem
             Time.timeScale = 1;
             
             pauseMenu.SetActive(false);
-            hud.SetActive(true);
+            
+            if (!dialogueManager.PlayingDialogue)
+                hud.SetActive(true);
+            else
+                dialogueBox.SetActive(true);
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;

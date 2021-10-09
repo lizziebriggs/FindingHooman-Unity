@@ -28,7 +28,10 @@ namespace DialogueSystem
 
         private void Update()
         {
-            if (playingDialogue)
+            // Pauses dialogue if pause menu is open
+            if (Time.timeScale == 0) return;
+
+                if (playingDialogue)
             {
                 if (Input.GetMouseButtonDown(0))
                     DisplayNextLine();
