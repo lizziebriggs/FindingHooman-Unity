@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Cel with Outline TEST 1
-  m_Shader: {fileID: -6465566751694194690, guid: 2367f9d7c56c5374285b5f3b988b6cc6, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 158eb21c266b35b4495c932b4cc546be, type: 3}
   m_ShaderKeywords: MAIN_LIGHT_CALCULATE_SHADOWS  _MAIN_LIGHT_SHADOWS_CASCADE _SHADOWS_SOFT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

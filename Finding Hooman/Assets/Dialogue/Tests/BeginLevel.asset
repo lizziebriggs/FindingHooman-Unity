@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BeginLevel
   m_EditorClassIdentifier: 
   dialogueImages:
-  - {fileID: 21300000, guid: 09da1ec340a93344caae63e79ddc18f9, type: 3}
-  - {fileID: 21300000, guid: d07f727b33d9f0847ad4df3d66b26eb3, type: 3}
-  - {fileID: 21300000, guid: 67f190a5a689aff49beb8263764f957b, type: 3}
+  - {fileID: 21300000, guid: ac6b809498087c54c8f1ebdd5f4c6079, type: 3}
+  - {fileID: 21300000, guid: ac6b809498087c54c8f1ebdd5f4c6079, type: 3}
+  - {fileID: 21300000, guid: 4899473dcc538e64abf7775aa8efe7b9, type: 3}
   lines:
   - I caught the ball!
   - Now I must take it back to my Hooman!

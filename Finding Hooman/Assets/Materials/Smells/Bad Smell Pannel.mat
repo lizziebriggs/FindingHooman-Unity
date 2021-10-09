@@ -36,11 +36,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Distortion_: 0.044
+    - Distortion_: 0.02
     - NoiseLevel_: 50
     - Transparants_: 20.3
     - Vector1_056bde8cede94322b3f6a1d1216c4767: 0
     m_Colors:
     - DistortionSpeed_: {r: 0.5, g: 0.5, b: 0, a: 0}
-    - SmellColor: {r: 0.65696406, g: 1, b: 0.5896226, a: 0.5803922}
+    - SmellColor: {r: 0.7725603, g: 1, b: 0.7216981, a: 0.4117647}
   m_BuildTextureStacks: []

@@ -5,15 +5,15 @@ namespace GameSystem
 {
     public class SingletonObject : MonoBehaviour
     {
-        private static SingletonObject instance;
-        public static SingletonObject Instance => instance;
+        private static SingletonObject Instance;
 
         private void Awake()
         {
-            if (!instance && instance != this)
+            // Enforce singleton
+            if (!Instance)
+                Instance = this;
+            else if (Instance != this)
                 Destroy(gameObject);
-
-            else instance = this;
         }
     }
 }
