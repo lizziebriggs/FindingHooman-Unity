@@ -19,6 +19,9 @@
             "m_Id": "d4d138dee6f04feba7ea435562a19a80"
         },
         {
+            "m_Id": "9d8f26c35268491aa56fb94e34d8f9b7"
+        },
+        {
             "m_Id": "056bde8cede94322b3f6a1d1216c4767"
         }
     ],
@@ -1917,6 +1920,29 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "9d8f26c35268491aa56fb94e34d8f9b7",
+    "m_Guid": {
+        "m_GuidSerialized": "b003d35c-fc57-4bac-ac44-bd1b79f11ad1"
+    },
+    "m_Name": "Transparants",
+    "m_DefaultReferenceName": "Vector1_9d8f26c35268491aa56fb94e34d8f9b7",
+    "m_OverrideReferenceName": "Transparants_",
+    "m_GeneratePropertyBlock": true,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 20.0,
+    "m_FloatType": 1,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 100.0
+    }
 }
 
 {
