@@ -13,10 +13,12 @@ namespace GameSystem
         [SerializeField] private GameObject hud;
         [SerializeField] private GameObject dialogueBox;
         [SerializeField] private GameObject pauseMenu;
+        [SerializeField] private GameObject bigMinimap;
 
         private void Start()
         {
             pauseMenu.SetActive(false);
+            bigMinimap.SetActive(false);
             dialogueTrigger.TriggerDialogue();
 
             Cursor.lockState = CursorLockMode.Locked;
@@ -25,21 +27,41 @@ namespace GameSystem
 
         private void Update()
         {
-            if (!Input.GetKeyDown(KeyCode.Escape)) return;
-
-            if (pauseMenu.activeSelf == false)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Time.timeScale = 0;
+                if (pauseMenu.activeSelf == false)
+                {
+                    Time.timeScale = 0;
                 
-                if(!dialogueManager.PlayingDialogue)
-                    hud.SetActive(false);
-                else
-                    dialogueBox.SetActive(false);
+                    if(!dialogueManager.PlayingDialogue)
+                        hud.SetActive(false);
+                    else
+                        dialogueBox.SetActive(false);
                 
-                pauseMenu.SetActive(true);
+                    pauseMenu.SetActive(true);
 
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
+                    Cursor.lockState = CursorLockMode.None;
+                    Cursor.visible = true;
+                }
+            }
+
+            if (dialogueManager.PlayingDialogue) return;
+
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                if (!bigMinimap.activeSelf)
+                {
+                    Time.timeScale = 0;
+                    hud.SetActive(false);
+                    bigMinimap.SetActive(true);
+                }
+                
+                else if (bigMinimap.activeSelf)
+                {
+                    Time.timeScale = 1;
+                    hud.SetActive(true);
+                    bigMinimap.SetActive(false);
+                }
             }
         }
 

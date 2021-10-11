@@ -6,8 +6,7 @@ namespace SmellSystem
     public class Smellable : MonoBehaviour
     {
         [Header("Smell Values")]
-        [SerializeField] private Color colour;
-        [SerializeField] private Transform direction;
+        [SerializeField] private ScentFollow smellTrail;
         
         [Header("Mood")]
         [SerializeField] private PlayerMoodController.Mood mood;
@@ -20,10 +19,12 @@ namespace SmellSystem
 
         private void OnTriggerStay(Collider other)
         {
+            if (smellTrail.gameObject.activeSelf) return;
+            
             if (Input.GetKey(KeyCode.E))
             {
-                // Direct smell shader in the defined direction
-                // with chosen colour
+                smellTrail.gameObject.SetActive(true);
+                smellTrail.ActivateTrail();
                 
                 Debug.Log("Sniff sniff");
                 SetMood();

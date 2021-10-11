@@ -1,18 +1,51 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class ScentFollow : MonoBehaviour
+namespace SmellSystem
 {
-    private NavMeshAgent Agent;
-
-    public Transform Target;
-
-    private void Start()
+    public class ScentFollow : MonoBehaviour
     {
-        Agent = GetComponent<NavMeshAgent>();
+        [Header("NavMesh")]
+        [SerializeField] private NavMeshAgent Agent;
+        [SerializeField] private Transform Target;
+        
+        [SerializeField] private TrailRenderer trail;
 
-        Agent.SetDestination(Target.position);
+        private Vector3 startPos;
+        private bool trailActive;
+        private float timer;
+
+        private void Start()
+        {
+            startPos = transform.position;
+            trailActive = false;
+            timer = 0;
+            
+            gameObject.SetActive(false);
+        }
+
+        private void Update()
+        {
+            if (!trailActive) return;
+
+            if (timer >= trail.time + Agent.speed)
+            {
+                trailActive = false;
+                transform.position = startPos;
+                timer = 0;
+                
+                gameObject.SetActive(false);
+            }
+
+            else
+                timer += Time.deltaTime;
+        }
+
+        public void ActivateTrail()
+        {
+            trailActive = true;
+            Agent.SetDestination(Target.position);
+        }
     }
 }
