@@ -23,10 +23,12 @@ namespace SmellSystem
             
             if (Input.GetKey(KeyCode.E))
             {
-                smellTrail.gameObject.SetActive(true);
-                smellTrail.ActivateTrail();
+                if (smellTrail)
+                {
+                    smellTrail.gameObject.SetActive(true);
+                    smellTrail.ActivateTrail();
+                }
                 
-                Debug.Log("Sniff sniff");
                 SetMood();
             }
         }

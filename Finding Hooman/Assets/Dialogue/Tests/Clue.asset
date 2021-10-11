@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a9864c474abf345b31b9f0df05e5ab, type: 3}
   m_Name: Clue
   m_EditorClassIdentifier: 
-  dialogueImages: []
+  dialogueImages:
+  - {fileID: 21300000, guid: b89014a88550e1847abcf67f07b19b90, type: 3}
+  - {fileID: 21300000, guid: 4899473dcc538e64abf7775aa8efe7b9, type: 3}
+  - {fileID: 21300000, guid: ac6b809498087c54c8f1ebdd5f4c6079, type: 3}
   lines:
+  - I miss my Hooman
   - '*sniff sniff*'
-  - This smells like my Hooman!
+  - Wait, this smells like my Hooman!

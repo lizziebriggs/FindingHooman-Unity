@@ -14,12 +14,23 @@ namespace GameSystem
         [SerializeField] private GameObject dialogueBox;
         [SerializeField] private GameObject pauseMenu;
         [SerializeField] private GameObject bigMinimap;
+        [SerializeField] private GameObject endScreen;
+
+        private bool foundOwner;
+
+        public bool FoundOwner
+        {
+            set => foundOwner = value;
+        }
 
         private void Start()
         {
             pauseMenu.SetActive(false);
             bigMinimap.SetActive(false);
+            endScreen.SetActive(false);
             dialogueTrigger.TriggerDialogue();
+
+            foundOwner = false;
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -29,20 +40,7 @@ namespace GameSystem
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (pauseMenu.activeSelf == false)
-                {
-                    Time.timeScale = 0;
-                
-                    if(!dialogueManager.PlayingDialogue)
-                        hud.SetActive(false);
-                    else
-                        dialogueBox.SetActive(false);
-                
-                    pauseMenu.SetActive(true);
-
-                    Cursor.lockState = CursorLockMode.None;
-                    Cursor.visible = true;
-                }
+                OpenMenu(pauseMenu);
             }
 
             if (dialogueManager.PlayingDialogue) return;
@@ -63,6 +61,26 @@ namespace GameSystem
                     bigMinimap.SetActive(false);
                 }
             }
+            
+            if(foundOwner && !dialogueManager.PlayingDialogue)
+                OpenMenu(endScreen);
+        }
+
+        private void OpenMenu(GameObject menuToOpen)
+        {
+            if (menuToOpen.activeSelf != false) return;
+            
+            Time.timeScale = 0;
+                
+            if(!dialogueManager.PlayingDialogue)
+                hud.SetActive(false);
+            else
+                dialogueBox.SetActive(false);
+                
+            menuToOpen.SetActive(true);
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
         public void ClosePauseMenu()
@@ -78,11 +96,6 @@ namespace GameSystem
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-        }
-
-        private void EndLevel()
-        {
-            // 
         }
     }
 }

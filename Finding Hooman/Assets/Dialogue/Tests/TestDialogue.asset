@@ -15,4 +15,4 @@ MonoBehaviour:
   dialogueImages: []
   lines:
   - Hello
-  - Thank you interacting with me
+  - Thank you for interacting with me

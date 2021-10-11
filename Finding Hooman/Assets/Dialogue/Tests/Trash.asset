@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12a9864c474abf345b31b9f0df05e5ab, type: 3}
   m_Name: Trash
   m_EditorClassIdentifier: 
-  dialogueImages: []
+  dialogueImages:
+  - {fileID: 21300000, guid: 4899473dcc538e64abf7775aa8efe7b9, type: 3}
+  - {fileID: 21300000, guid: a009b87d5d74186449e7fa587a6feb73, type: 3}
   lines:
-  - This doesn't smell like my owner
-  - Maybe sniffing this was a bad idea
+  - This doesn't smell like my owner!
+  - Maybe sniffing this was a bad idea...
