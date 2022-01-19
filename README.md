@@ -1,6 +1,8 @@
 # Finding Hooman
 This is a third-year project for Games and Animation students to develop a prototype game using Unity in two weeks with the theme of "smell". As a team we came up with the concept of a 3D adventure game where the player is a dog who can sniff objects in order to solve puzzles and find their Hooman.
 
+After the prototype development, the team are now working to [port the game into Unreal Engine](https://github.com/lizziebriggs/FindingHooman-Unreal) and develop more features and assets.
+
 ### Demos
 
 Here are a couple showcases demonstrating the prototype development:
@@ -12,6 +14,6 @@ Here are a couple showcases demonstrating the prototype development:
 
 ### Unreal Development
 
-After the prototype development, the team are now working to port the game into Unreal Engine. The image below shows the latest state of the game in UE:
+Here's a sneak peak of the current Unreal development so far!
 
 ![Finding Hooman (Unreal)](https://user-images.githubusercontent.com/50921515/148382946-49124ce3-bbb3-4aae-9a26-3bc33d541214.PNG)
